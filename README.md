@@ -1,21 +1,9 @@
-# 吃货TI - 本命食材MBTI测试
+# 吃货TI - 本命食材 MBTI 测试
 
-一个有趣的MBTI风格人格测试网站，将你的性格与本命食材联系起来，还可以邀请朋友一起"做菜"！
+一个用 React + Vite 编写的静态测试网页。
 
-🍳 在线体验：https://yyyyyyygxa.github.io/CHTI
-
-## 功能特点
-
-- 📊 12道趣味MBTI风格测试题
-- 🥕 12种专属本命食材
-- 👥 多人互动，组合食材做料理
-- 🎨 精美的渐变UI设计
-
-## 技术栈
-
-- React 18
-- Vite 5
-- 纯CSS动画
+线上地址：
+[https://yyyyyyygxa.github.io/CHTI/](https://yyyyyyygxa.github.io/CHTI/)
 
 ## 本地运行
 
@@ -24,12 +12,18 @@ npm install
 npm run dev
 ```
 
-## 构建生产版本
+## 本地构建
 
 ```bash
 npm run build
 ```
 
-## 部署
+## GitHub Pages 发布
 
-项目已配置GitHub Actions，自动部署到GitHub Pages。
+仓库已经配置好 GitHub Pages 工作流：
+
+- 推送到 `main` 后会自动构建并发布
+- 发布内容来自 `dist/`
+- Vite 会在 GitHub Pages 环境下自动使用仓库名作为资源基路径
+
+如果仓库是第一次启用 Pages，还需要到 GitHub 仓库的 `Settings -> Pages` 中确认 `Source` 为 `GitHub Actions`。
