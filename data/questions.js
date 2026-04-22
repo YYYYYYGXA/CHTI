@@ -1,178 +1,439 @@
 export const questions = [
   {
     id: 1,
-    dimension: "温度轴",
-    axis: "temperature",
-    text: "深夜十一点，你加完班走出公司，发现常去的那家小店还亮着灯，你会？",
+    dimension: '社交气温',
+    axisLabel: 'C vs J',
+    axis: 'social',
+    text: '周五晚上临时被约去新开的居酒屋，你的第一反应是？',
     options: [
-      { letter: "A", text: "假装没看见，直接打车回家睡觉", score: { warmth: 1 } },
-      { letter: "B", text: "进去点碗热汤，坐下来慢慢吃完再回去", score: { warmth: 2 } },
-      { letter: "C", text: "打个电话叫上住附近的朋友一起去吃夜宵", score: { spiciness: 1 } },
-      { letter: "D", text: "冲进去点一桌子烧烤，拉朋友出来一起嗨", score: { spiciness: 2 } }
+      {
+        id: 'q1a',
+        title: '先看看状态',
+        text: '如果今天有点累，我更想带一份喜欢的小食回家慢慢吃。',
+        weight: { social: -2 }
+      },
+      {
+        id: 'q1b',
+        title: '立刻出门',
+        text: '新店就是要趁热去，最好再拉上几个人一起点满一桌。',
+        weight: { social: 2 }
+      }
     ]
   },
   {
     id: 2,
-    dimension: "质地轴",
-    axis: "texture",
-    text: "你精心准备了一周的方案，在会议上被人全盘否定，你会？",
+    dimension: '口味浓度',
+    axisLabel: 'H vs M',
+    axis: 'flavor',
+    text: '天气有点闷的时候，你更想用什么安慰自己？',
     options: [
-      { letter: "A", text: "默默点头接受，心里想着下次做得更好", score: { soft: 2 } },
-      { letter: "B", text: "虚心请教哪里可以改进，接受建设性意见", score: { soft: 1 } },
-      { letter: "C", text: "坚持自己的观点，用数据说服对方", score: { tough: 1 } },
-      { letter: "D", text: "当场冷静反驳，列出所有支撑依据据理力争", score: { tough: 2 } }
+      {
+        id: 'q2a',
+        title: '清汤热茶',
+        text: '温润、清爽、带点回甘的食物最能让我慢下来。',
+        weight: { flavor: -2 }
+      },
+      {
+        id: 'q2b',
+        title: '重口暴击',
+        text: '越是疲惫越想吃浓酱、拉丝、厚厚一层料的东西。',
+        weight: { flavor: 2 }
+      }
     ]
   },
   {
     id: 3,
-    dimension: "风味轴",
-    axis: "flavor",
-    text: "你独自一人在家做饭慰劳自己，你会选择？",
+    dimension: '饮食风格',
+    axisLabel: 'T vs N',
+    axis: 'style',
+    text: '你在菜单上看到“经典复刻”和“主厨脑洞限定”，会点哪边？',
     options: [
-      { letter: "A", text: "煮碗清汤面，加个蛋，简单却舒服", score: { light: 2 } },
-      { letter: "B", text: "炒一盘番茄炒蛋，熟悉的味道最治愈", score: { light: 1 } },
-      { letter: "C", text: "红烧肉配白米饭，狠狠地奖励自己一顿", score: { rich: 1 } },
-      { letter: "D", text: "火锅底料炒香，炖上一锅热气腾腾的硬菜", score: { rich: 2 } }
+      {
+        id: 'q3a',
+        title: '经典复刻',
+        text: '稳稳好吃最重要，名菜之所以经典一定有道理。',
+        weight: { style: -2 }
+      },
+      {
+        id: 'q3b',
+        title: '脑洞限定',
+        text: '来都来了，不试点奇怪又新鲜的东西总觉得可惜。',
+        weight: { style: 2 }
+      }
     ]
   },
   {
     id: 4,
-    dimension: "温度轴",
-    axis: "temperature",
-    text: "在朋友的婚礼上，你更愿意坐在？",
+    dimension: '点单方式',
+    axisLabel: 'I vs P',
+    axis: 'decision',
+    text: '出发去吃一家很火的店之前，你通常会？',
     options: [
-      { letter: "A", text: "角落里安静吃饭，不做显眼的事", score: { warmth: 1 } },
-      { letter: "B", text: "熟悉的亲友旁边，享受温馨的氛围", score: { warmth: 2 } },
-      { letter: "C", text: "主动去认识新朋友，和陌生人聊天", score: { spiciness: 1 } },
-      { letter: "D", text: "冲到舞台中央，带动气氛让大家嗨起来", score: { spiciness: 2 } }
+      {
+        id: 'q4a',
+        title: '走到再说',
+        text: '现场闻到什么香、看到什么顺眼，我就想点什么。',
+        weight: { decision: -2 }
+      },
+      {
+        id: 'q4b',
+        title: '提前研究',
+        text: '先翻评价、看榜单、收藏必点，才安心出门。',
+        weight: { decision: 2 }
+      }
     ]
   },
   {
     id: 5,
-    dimension: "质地轴",
-    axis: "texture",
-    text: "你答应帮朋友的事，最后发现很难完成，你会？",
+    dimension: '社交气温',
+    axisLabel: 'C vs J',
+    axis: 'social',
+    text: '火锅局里你最自然的状态是？',
     options: [
-      { letter: "A", text: "想办法糊弄过去，不要让朋友失望", score: { soft: 2 } },
-      { letter: "B", text: "尽早坦白说太难了，请求朋友理解", score: { soft: 1 } },
-      { letter: "C", text: "硬着头皮也要完成，承诺了就要做到", score: { tough: 1 } },
-      { letter: "D", text: "想尽一切办法，甚至熬夜也要搞定", score: { tough: 2 } }
+      {
+        id: 'q5a',
+        title: '安静投喂型',
+        text: '我会默默把熟了的好吃的夹给熟人，不一定抢话。',
+        weight: { social: -1 }
+      },
+      {
+        id: 'q5b',
+        title: '气氛点火型',
+        text: '我会主动发起新话题，还想加单把场子炒热。',
+        weight: { social: 1 }
+      }
     ]
   },
   {
     id: 6,
-    dimension: "风味轴",
-    axis: "flavor",
-    text: "你看电影时，更容易被什么样的场景打动？",
+    dimension: '口味浓度',
+    axisLabel: 'H vs M',
+    axis: 'flavor',
+    text: '面对一份甜品，你更容易被哪种打动？',
     options: [
-      { letter: "A", text: "雨天主人公一个人坐在窗边发呆的画面", score: { light: 2 } },
-      { letter: "B", text: "一家人围在一起吃家常菜的温馨场景", score: { light: 1 } },
-      { letter: "C", text: "主角在高级餐厅举起酒杯庆祝的画面", score: { rich: 1 } },
-      { letter: "D", text: "盛大宴会觥筹交错、灯火辉煌的场景", score: { rich: 2 } }
+      {
+        id: 'q6a',
+        title: '轻盈和果子',
+        text: '豆香、抹茶、柚子、奶冻这种细水长流的甜很迷人。',
+        weight: { flavor: -1 }
+      },
+      {
+        id: 'q6b',
+        title: '奶油千层',
+        text: '我就喜欢厚乳、爆浆、焦糖脆壳这种一步到位的满足。',
+        weight: { flavor: 1 }
+      }
     ]
   },
   {
     id: 7,
-    dimension: "温度轴",
-    axis: "temperature",
-    text: "当有人第一次见你就说'我们好像在哪见过'，你会？",
+    dimension: '饮食风格',
+    axisLabel: 'T vs N',
+    axis: 'style',
+    text: '旅行到一个陌生城市时，你最先找的是？',
     options: [
-      { letter: "A", text: "礼貌性微笑回应，但不往心里去", score: { warmth: 1 } },
-      { letter: "B", text: "觉得有缘，主动多聊几句", score: { warmth: 2 } },
-      { letter: "C", text: "开玩笑说'这是搭讪新方式吗'", score: { spiciness: 1 } },
-      { letter: "D", text: "立刻热情回应，约着一起喝咖啡", score: { spiciness: 2 } }
+      {
+        id: 'q7a',
+        title: '老字号',
+        text: '想吃当地人反复认证过的味道，像在了解一座城的底色。',
+        weight: { style: -1 }
+      },
+      {
+        id: 'q7b',
+        title: '新派实验店',
+        text: '越有设计感、越难定义的菜单越让我好奇。',
+        weight: { style: 1 }
+      }
     ]
   },
   {
     id: 8,
-    dimension: "质地轴",
-    axis: "texture",
-    text: "你整理房间时，翻到了前任留下的东西，你会？",
+    dimension: '点单方式',
+    axisLabel: 'I vs P',
+    axis: 'decision',
+    text: '如果朋友把点单权完全交给你，你会怎么处理？',
     options: [
-      { letter: "A", text: "直接扔掉，向前看最重要", score: { soft: 2 } },
-      { letter: "B", text: "收进箱子里放着，偶尔想起也不难过", score: { soft: 1 } },
-      { letter: "C", text: "拍张照留念，然后好好收起来", score: { tough: 1 } },
-      { letter: "D", text: "小心翼翼包好，这是青春的印记", score: { tough: 2 } }
+      {
+        id: 'q8a',
+        title: '看现场灵感',
+        text: '我会边聊边点，想让这一餐保留一点随机惊喜。',
+        weight: { decision: -1 }
+      },
+      {
+        id: 'q8b',
+        title: '快速搭配',
+        text: '我会立刻按凉菜、主菜、主食、甜品排好结构。',
+        weight: { decision: 1 }
+      }
     ]
   },
   {
     id: 9,
-    dimension: "风味轴",
-    axis: "flavor",
-    text: "你去一个陌生城市旅行，你更想体验？",
+    dimension: '社交气温',
+    axisLabel: 'C vs J',
+    axis: 'social',
+    text: '深夜食堂快打烊了，只剩最后一个座位，你会希望旁边是？',
     options: [
-      { letter: "A", text: "在青旅天台看日落，发呆一整个下午", score: { light: 2 } },
-      { letter: "B", text: "在老街巷弄里走走，感受市井气息", score: { light: 1 } },
-      { letter: "C", text: "去当地著名餐厅，尝遍所有招牌菜", score: { rich: 1 } },
-      { letter: "D", text: "找一家深夜小酒馆，和当地人喝到天亮", score: { rich: 2 } }
+      {
+        id: 'q9a',
+        title: '一个沉默的人',
+        text: '各吃各的也没关系，安静的陪伴本身就很舒服。',
+        weight: { social: -2 }
+      },
+      {
+        id: 'q9b',
+        title: '一个很会聊天的人',
+        text: '说不定能从夜宵聊到人生，陌生人局也挺浪漫。',
+        weight: { social: 2 }
+      }
     ]
   },
   {
     id: 10,
-    dimension: "温度轴",
-    axis: "temperature",
-    text: "你心里烦闷的时候，更想一个人待着，还是找人倾诉？",
+    dimension: '口味浓度',
+    axisLabel: 'H vs M',
+    axis: 'flavor',
+    text: '你理想中的早餐，更接近哪一种节奏？',
     options: [
-      { letter: "A", text: "一个人待着，看看书听听音乐自己消化", score: { warmth: 2 } },
-      { letter: "B", text: "和熟悉的朋友倾诉，不求建议只求陪伴", score: { warmth: 1 } },
-      { letter: "C", text: "发条朋友圈，看谁来找自己", score: { spiciness: 1 } },
-      { letter: "D", text: "拉上朋友喝酒唱歌，用热闹驱散烦闷", score: { spiciness: 2 } }
+      {
+        id: 'q10a',
+        title: '温柔开场',
+        text: '米粥、味噌汤、饭团、蛋卷，轻一点会让我整天更顺。',
+        weight: { flavor: -1 }
+      },
+      {
+        id: 'q10b',
+        title: '强势唤醒',
+        text: '芝士、培根、煎炸、浓咖啡，早点就该有存在感。',
+        weight: { flavor: 1 }
+      }
     ]
   },
   {
     id: 11,
-    dimension: "质地轴",
-    axis: "texture",
-    text: "面对一条不合理的规定，你的态度是？",
+    dimension: '饮食风格',
+    axisLabel: 'T vs N',
+    axis: 'style',
+    text: '如果一道菜和你想象中的味道完全不一样，你通常会？',
     options: [
-      { letter: "A", text: "表面遵守，暗地里想办法绕过去", score: { soft: 2 } },
-      { letter: "B", text: "遵守就好，规定本身不重要", score: { soft: 1 } },
-      { letter: "C", text: "找相关部门反映，推动规则改善", score: { tough: 1 } },
-      { letter: "D", text: "无视规定，按自己认为对的方式做", score: { tough: 2 } }
+      {
+        id: 'q11a',
+        title: '先怀念原版',
+        text: '我会下意识拿它和记忆里的标准味比较。',
+        weight: { style: -2 }
+      },
+      {
+        id: 'q11b',
+        title: '先理解它',
+        text: '只要自成逻辑，我愿意把它当成新的体验接受。',
+        weight: { style: 2 }
+      }
     ]
   },
   {
     id: 12,
-    dimension: "风味轴",
-    axis: "flavor",
-    text: "你更喜欢听别人怎么夸你？",
+    dimension: '点单方式',
+    axisLabel: 'I vs P',
+    axis: 'decision',
+    text: '面对限定菜单只供应三天，你会怎么行动？',
     options: [
-      { letter: "A", text: "夸我低调务实，不张扬", score: { light: 2 } },
-      { letter: "B", text: "夸我让人相处起来很舒服", score: { light: 1 } },
-      { letter: "C", text: "夸我见解深刻，有品位", score: { rich: 1 } },
-      { letter: "D", text: "夸我气场强大，与众不同", score: { rich: 2 } }
+      {
+        id: 'q12a',
+        title: '碰上就吃',
+        text: '如果刚好有缘遇到，那就是命中注定的那一口。',
+        weight: { decision: -2 }
+      },
+      {
+        id: 'q12b',
+        title: '立刻安排',
+        text: '我会马上定时间，避免错过之后念念不忘。',
+        weight: { decision: 2 }
+      }
     ]
   }
 ]
 
-export const calculateMBTI = (answers) => {
-  const result = {
-    warmth: 0,
-    spiciness: 0,
-    soft: 0,
-    tough: 0,
-    light: 0,
-    rich: 0
+export const summarizeScores = (answers) => {
+  const totals = {
+    social: 0,
+    flavor: 0,
+    style: 0,
+    decision: 0
   }
 
   answers.forEach((answerIndex, questionIndex) => {
-    if (answerIndex !== null && questions[questionIndex]) {
-      const option = questions[questionIndex].options[answerIndex]
-      if (option && option.score) {
-        Object.keys(option.score).forEach(key => {
-          result[key] += option.score[key]
-        })
-      }
-    }
+    if (answerIndex === null) return
+
+    const option = questions[questionIndex]?.options[answerIndex]
+    if (!option) return
+
+    Object.entries(option.weight).forEach(([key, value]) => {
+      totals[key] += value
+    })
   })
 
-  return result
+  return totals
 }
 
-export const getAxisScore = (scores) => {
-  return {
-    temperature: scores.warmth - scores.spiciness,
-    texture: scores.tough - scores.soft,
-    flavor: scores.rich - scores.light
+export const profiles = {
+  CHTI: {
+    symbol: '茶',
+    name: '庭院茶点系',
+    summary: '你像午后三点的和菓子铺，安静、细腻、会把食物吃成一种情绪修复。',
+    keywords: ['慢热', '清润', '经典安心', '随心一点'],
+    vibe: '你在饭桌上不是最吵的那个，却常常是最让人放松的那个。你喜欢味道有留白，喜欢熟悉的小店，也相信“想吃什么”本身就是一种答案。',
+    menu: ['抹茶白玉', '味噌豆腐锅', '梅子饭团', '玉子烧'],
+    scene: '下雨天靠窗的小店、木质托盘、热茶起雾，最好还能听见门铃轻轻响。',
+    motto: '今天也不必太用力，先吃一口让心变软的东西。'
+  },
+  CHTP: {
+    symbol: '匣',
+    name: '便当收藏系',
+    summary: '你温和、讲究、会认真安排每一餐的小确幸，是“吃饭也要有秩序感”的代表。',
+    keywords: ['细致', '治愈', '经典控', '计划型'],
+    vibe: '你很擅长把吃饭过成仪式。你知道哪家店几点出炉最好吃，也会把想去的馆子一间间标进地图里，耐心等一个合适时机。',
+    menu: ['鳗鱼便当', '照烧鸡饭', '栗子铜锣烧', '茶泡饭'],
+    scene: '周末上午整理好路线，一站一站去收集你早就想吃的店。',
+    motto: '对待喜欢的味道，提前安排是温柔，不是拘谨。'
+  },
+  CHNI: {
+    symbol: '樱',
+    name: '季节限定系',
+    summary: '你温柔但不无聊，对新鲜感有敏锐天线，喜欢轻盈又带点灵气的创意搭配。',
+    keywords: ['柔和', '清新', '猎奇感', '跟着感觉走'],
+    vibe: '你会被季节菜单和限定口味击中，也能接受“这道菜不按常理出牌”。你需要的是带有一点惊喜的温柔，而不是过度刺激。',
+    menu: ['樱花水信玄饼', '柚子胡椒乌冬', '豆乳布丁', '香草可丽饼'],
+    scene: '春夜散步后误入一间只有十几席的小店，菜单刚好写着今日限定。',
+    motto: '喜欢新东西，不代表漂浮，你只是懂得为惊喜留位置。'
+  },
+  CHNP: {
+    symbol: '笺',
+    name: '预约限定系',
+    summary: '你看起来软糯，实际上最会研究隐藏菜单，是把细节和新鲜感一起拿下的人。',
+    keywords: ['温柔脑', '轻负担', '尝鲜派', '攻略型'],
+    vibe: '你会先把店铺背景、推荐搭配、出餐时段都摸清，再精准去吃最值得的那一口。你不爱轰轰烈烈，但很会把新鲜体验安排得漂亮。',
+    menu: ['季节怀石小套餐', '山椒奶油意面', '玄米茶巴斯克', '海盐柚子塔'],
+    scene: '提前半个月约好的限时联名店，连座位靠窗还是靠里都想好了。',
+    motto: '认真做功课，不是失去浪漫，而是保护浪漫。'
+  },
+  CMTI: {
+    symbol: '锅',
+    name: '深夜暖锅系',
+    summary: '你外表安静，内里却是浓香派，越在需要安慰的时候越想吃一口有重量的幸福。',
+    keywords: ['慢熟', '厚味', '经典依赖', '随性点单'],
+    vibe: '你平时低调，但口味从不寡淡。你偏爱能把人稳稳接住的食物，比如热锅、炖煮、奶香与酱香。你未必话多，但吃得很真诚。',
+    menu: ['寿喜锅', '厚切猪排饭', '奶油炖菜', '焦糖布丁'],
+    scene: '风很大的冬夜，一个人也愿意专门绕路去吃一锅热腾腾的东西。',
+    motto: '沉默不等于清淡，你只是把热烈藏在胃口里。'
+  },
+  CMTP: {
+    symbol: '炉',
+    name: '熟成定番系',
+    summary: '你爱浓郁，也爱掌控感，偏好那些经过验证的高满足菜单。',
+    keywords: ['稳重', '满足感', '复刻经典', '清单型'],
+    vibe: '你知道自己喜欢什么，也不轻易被网红噱头带跑。你愿意花时间找到最对味的一家，然后反复回访，直到那家店变成你的精神根据地。',
+    menu: ['和牛寿喜烧', '浓汤拉面', '焗烤明太子土豆', '生巧蛋糕'],
+    scene: '天气转凉的傍晚，按计划去老地方点回那套让人百分百安心的组合。',
+    motto: '真正的幸福感，很多时候来自确定无误的那一口。'
+  },
+  CMNI: {
+    symbol: '焙',
+    name: '浓香实验系',
+    summary: '你喜欢软氛围和新点子，但口味绝不客气，是会被“限时浓郁特调”精准击中的人。',
+    keywords: ['温软', '厚味控', '创意派', '直觉型'],
+    vibe: '你会因为一道名字奇怪的限定甜品走进一间店，也会因为一个诱人描述临时改主意。你的世界观是：食物最好温柔地炸裂。',
+    menu: ['焙茶提拉米苏', '海胆奶油饭', '明太子年糕披萨', '酒粕冰淇淋'],
+    scene: '灯光昏黄的小酒馆里，看见当日黑板菜单就瞬间心动。',
+    motto: '有些惊艳，必须是厚厚地、热热地扑过来才算数。'
+  },
+  CMNP: {
+    symbol: '宴',
+    name: '策展重口系',
+    summary: '你很懂得把“重口满足”和“新鲜体验”放进同一张完美的行程单里。',
+    keywords: ['高完成度', '浓郁控', '尝鲜脑', '执行力'],
+    vibe: '你常常不是随便吃一顿，而是在策划一场主题明确的饮食体验。你既要有层次、有记忆点，也要有足够高的满足度，不能浪费胃口。',
+    menu: ['限定蘸面', '炙烧鹅肝寿司', '黑松露可乐饼', '芝士流心鲷鱼烧'],
+    scene: '为了某个联名菜单跨城也可以，只要值得，你就愿意认真吃一场。',
+    motto: '胃口很珍贵，所以每一次出动都要尽量精彩。'
+  },
+  JHTI: {
+    symbol: '团',
+    name: '暖场分享系',
+    summary: '你天然适合把一桌人喂开心，喜欢舒服不压人的热闹和人人都能接住的味道。',
+    keywords: ['外向', '清爽派', '传统友好', '随性自然'],
+    vibe: '你是聚餐里的氛围缓冲垫，能照顾口味、能接话，也不喜欢让食物变成压迫感。你偏爱大众都能吃得开心的菜，热闹但不吵。',
+    menu: ['关东煮', '亲子丼', '酱油团子', '柚子苏打'],
+    scene: '朋友聚会时自然坐在中间，边分菜边聊天，大家都会莫名放松。',
+    motto: '好吃这件事，分享出去才会长出第二份快乐。'
+  },
+  JHTP: {
+    symbol: '笼',
+    name: '聚会统筹系',
+    summary: '你既会热场，也会安排，是那种能把朋友聚餐办得很舒服的人。',
+    keywords: ['社交担当', '清润口', '经典稳妥', '组织型'],
+    vibe: '谁能吃辣、谁不吃生冷、谁想拍照、哪家店要提前排队，你心里都有数。你的快乐不仅在于吃到，还在于让所有人都吃得刚好。',
+    menu: ['寿司拼盘', '鸡肉串烧', '茶碗蒸', '焦糖豆乳布蕾'],
+    scene: '朋友说“随便吃什么都行”，你却能迅速安排出一场零翻车聚餐。',
+    motto: '真正成熟的吃货，会把别人的胃口也一起照顾好。'
+  },
+  JHNI: {
+    symbol: '风',
+    name: '市集漫游系',
+    summary: '你喜欢热闹与新鲜，但不追求压迫式重口，最适合边逛边吃、边笑边挑新东西。',
+    keywords: ['轻快', '新鲜感', '游逛型', '即时心动'],
+    vibe: '你对新食物的接受度很高，也喜欢在市集、快闪、街角小摊里发现快乐。你不一定要吃最贵的，但一定想吃得有趣。',
+    menu: ['水果大福', '盐味冰淇淋', '创意饭团', '海苔玉子三明治'],
+    scene: '城市节日市集、河边夜灯、手里拿着三样小吃，边走边聊边决定下一口。',
+    motto: '我想要的不是被定义的好吃，而是好吃正在发生。'
+  },
+  JHNP: {
+    symbol: '帖',
+    name: '排队攻略系',
+    summary: '你爱热闹，也爱研究，是朋友口中的“本地美食导航系统”。',
+    keywords: ['社交属性强', '清爽不腻', '探索癖', '路线规划'],
+    vibe: '你擅长把热门与冷门串成一条流畅路线，让一天里每一顿都各有高潮。你会让人觉得，原来认真吃饭也可以这么有趣。',
+    menu: ['限定饭团礼盒', '柚子盐拉面', '烤菠萝黄油吐司', '季节果物塔'],
+    scene: '节假日带朋友进行一场从午后咖啡到深夜甜品的完整觅食行程。',
+    motto: '真正的吃货不是盲冲，而是知道什么时候冲最值。'
+  },
+  JMTI: {
+    symbol: '焰',
+    name: '热辣主场系',
+    summary: '你很会带动气氛，口味又偏浓郁，是“聚餐必须有你”类型的重磅吃货。',
+    keywords: ['热场王', '满足优先', '经典局', '跟感觉走'],
+    vibe: '你吃饭不仅为了吃饱，更是为了把气氛烧起来。你偏爱有声量的食物，比如滋啦作响、热气腾腾、咬下去能让人眼睛一亮的那种。',
+    menu: ['铁板牛肉', '豚骨拉面', '炸鸡拼盘', '厚乳拿铁'],
+    scene: '大桌聚餐、深夜续摊、灯光亮一点、人声满一点，你才会觉得这顿饭活了。',
+    motto: '饭桌应该有温度，也应该有声量。'
+  },
+  JMTP: {
+    symbol: '令',
+    name: '王牌组局系',
+    summary: '你既重口又会规划，最适合担任“今晚吃什么”的终极决策者。',
+    keywords: ['掌控感', '浓味派', '稳准狠', '组局高手'],
+    vibe: '你会根据人数、预算、距离和口味偏好快速做出最优解。你喜欢高满足度，也知道怎么把资源用在刀刃上，局从你手里基本不会散。',
+    menu: ['烧鸟全套', '和牛盖饭', '海鲜奶油可乐饼', '黑糖厚切吐司'],
+    scene: '一群人临时起意说“今晚必须吃点好的”，这时候最适合把手机交给你。',
+    motto: '热闹和满足都不该靠运气，完全可以靠安排。'
+  },
+  JMNI: {
+    symbol: '鲷',
+    name: '夜宵冒险系',
+    summary: '你喜欢人群、重口与新鲜刺激，属于看到奇怪搭配就想立刻试试的行动派。',
+    keywords: ['高能量', '猎奇胃', '现场派', '重口快乐'],
+    vibe: '你愿意为一口新奇而绕远路，也很容易在热闹的夜里被菜单激起胜负欲。你讨厌无聊，比起稳妥，你更相信“难忘”才值回票价。',
+    menu: ['辣味噌汉堡排', '鹅肝寿司卷', '地狱拉面', '酒酿奶盖刨冰'],
+    scene: '凌晨还亮着灯的店、朋友怂恿的一句“来都来了”、以及一整桌看起来很危险但很香的菜。',
+    motto: '最好吃的那一口，常常就在下一次冒险里。'
+  },
+  JMNP: {
+    symbol: '锦',
+    name: '盛宴策划系',
+    summary: '你是 CHTI 里的高配型组局王，爱热闹、爱浓味、爱新鲜，还擅长把它们全部安排到位。',
+    keywords: ['全场焦点', '大满足', '高探索', '超会安排'],
+    vibe: '你不满足于普通聚餐，而是想打造一场从开胃菜到收尾甜品都令人惊呼的盛宴。你对“值得”有极强判断力，也很少让大家失望。',
+    menu: ['主厨限定 omakase', '火焰寿司拼盘', '芝士炸猪排三明治', '联名限定圣代'],
+    scene: '生日局、庆功局、节日局，只要想把这一顿吃成记忆点，你就是最合适的总导演。',
+    motto: '既然要吃，就吃成今晚的高光时刻。'
   }
 }
