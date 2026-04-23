@@ -3,7 +3,7 @@
 一个用 React + Vite 编写的静态测试网页。
 
 线上地址：
-[https://yyyyyyygxa.github.io/CHTI/](https://yyyyyyygxa.github.io/CHTI/)
+[https://yyyyyygxa.github.io/CHTI/](https://yyyyyygxa.github.io/CHTI/)
 
 ## 本地运行
 
