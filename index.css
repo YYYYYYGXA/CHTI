@@ -1,5 +1,5 @@
 :root {
-  font-family: 'Zen Maru Gothic', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+  font-family: 'Inter', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
   color: #54453f;
   background:
     radial-gradient(circle at top left, rgba(255, 236, 220, 0.8), transparent 28%),
@@ -127,16 +127,17 @@ button {
   margin: 0;
   display: grid;
   gap: 8px;
-  font-family: 'Shippori Mincho', 'STSong', serif;
   font-size: clamp(3.6rem, 10vw, 7rem);
   line-height: 0.92;
   color: #60483f;
+  font-weight: 700;
 }
 
 .hero-title span {
   font-size: clamp(1.2rem, 3vw, 2rem);
   letter-spacing: 0.08em;
   color: var(--soft-ink);
+  font-weight: 500;
 }
 
 .hero-subtitle {
@@ -310,9 +311,9 @@ blockquote,
 
 .question-title {
   margin: 0 0 24px;
-  font-family: 'Shippori Mincho', 'STSong', serif;
   font-size: clamp(1.5rem, 4vw, 2.3rem);
   line-height: 1.45;
+  font-weight: 600;
 }
 
 .option-list {
@@ -360,6 +361,7 @@ blockquote,
 
 .option-content strong {
   font-size: 1.02rem;
+  font-weight: 600;
 }
 
 .option-content small {
@@ -408,15 +410,15 @@ blockquote,
 
 .result-code {
   margin: 0;
-  font-family: 'Shippori Mincho', 'STSong', serif;
   font-size: clamp(3rem, 8vw, 5rem);
   line-height: 1;
   color: #5b433a;
+  font-weight: 700;
 }
 
 .result-name {
-  font-family: 'Shippori Mincho', 'STSong', serif;
   font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 600;
 }
 
 .result-summary {
@@ -475,6 +477,7 @@ blockquote {
 
 .axis-labels strong {
   color: var(--ink);
+  font-weight: 600;
 }
 
 .axis-track {
@@ -550,6 +553,162 @@ blockquote {
   }
 }
 
+/* 食材展示样式 */
+.food-display {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.food-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.food-symbol {
+  font-size: 2.5rem;
+}
+
+.food-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+}
+
+/* 好友食材输入样式 */
+.friend-ingredients {
+  padding: 20px 0;
+}
+
+.ingredient-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+}
+
+.ingredient-input input {
+  flex: 1;
+  min-height: 54px;
+  padding: 0 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 251, 246, 0.85);
+  font: inherit;
+  color: var(--ink);
+  min-width: 200px;
+}
+
+.ingredient-input input::placeholder {
+  color: var(--soft-ink);
+}
+
+.ingredients-list {
+  margin-bottom: 24px;
+}
+
+.ingredients-list h4 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ingredients-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ingredients-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255, 251, 246, 0.85);
+  border: 1px solid var(--line);
+  font-size: 0.92rem;
+}
+
+.remove-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent-deep);
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+
+.remove-button:hover {
+  background: #9a4a33;
+  transform: none;
+}
+
+.no-ingredients {
+  color: var(--soft-ink);
+  font-style: italic;
+}
+
+/* 菜品结果样式 */
+.dish-result {
+  padding: 20px 0;
+}
+
+.dish-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--accent-deep);
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.dish-description {
+  margin: 0 0 16px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+.dish-message {
+  margin: 0 0 20px;
+  line-height: 1.8;
+  color: var(--accent-deep);
+  font-style: italic;
+  text-align: center;
+}
+
+.dish-ingredients h5 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.ingredients-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.ingredient-tag {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(208, 127, 99, 0.12), rgba(157, 179, 140, 0.18));
+  color: var(--accent-deep);
+  font-size: 0.92rem;
+}
+
 @media (max-width: 900px) {
   .hero-card {
     padding: 44px 26px;
@@ -564,6 +723,14 @@ blockquote {
   .axis-labels {
     grid-template-columns: 1fr;
     display: grid;
+  }
+
+  .ingredient-input {
+    flex-direction: column;
+  }
+
+  .ingredient-input input {
+    width: 100%;
   }
 }
 
@@ -601,5 +768,18 @@ blockquote {
     width: 32px;
     height: 32px;
     top: -9px;
+  }
+
+  .food-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .food-symbol {
+    font-size: 2rem;
+  }
+
+  .food-name {
+    font-size: 1.5rem;
   }
 }
